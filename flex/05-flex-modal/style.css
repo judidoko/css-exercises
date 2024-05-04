@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -19,9 +20,19 @@ body {
   background: white;
   width: 480px;
   border-radius: 10px;
-  box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-shrink: 1;
+  padding: 1em;
 }
-
+.hearder-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 .icon {
   color: royalblue;
   font-size: 26px;
@@ -33,6 +44,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 10px;
 }
 
 .close-button {
@@ -49,7 +61,9 @@ body {
   border: 1px solid #eee;
   padding: 0;
 }
-
+.text {
+  margin: 1em 0;
+}
 button {
   cursor: pointer;
   padding: 8px 16px;
