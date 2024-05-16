@@ -53,11 +53,65 @@ button {
   opacity: 0%;
 }
 
+.backdrop.show {
+  opacity: 30%;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide-in {
+  0% {
+    transform: translatey(-800%);
+  }
+  100% {
+    transform: translate(-50% -50%);
+  }
+}
 .popup-modal.show {
   opacity: 100%;
   pointer-events: all;
+  animation: slide-in 2000ms forwards, fade-in 2000ms forwards;
 }
 
-.backdrop.show {
-  opacity: 30%;
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide-out {
+  from {
+    transform: translate(-50% -50%);
+  }
+  to {
+    transform: translatey(-800%);
+  }
+}
+.popup-modal {
+  animation: slide-out 2000ms forwards, fade-out 2000ms forwards;
 }
